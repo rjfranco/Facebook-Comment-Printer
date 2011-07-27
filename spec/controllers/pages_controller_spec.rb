@@ -18,7 +18,7 @@ describe PagesController do
   describe "GET 'comments'" do
     it "should be successful" do
       get 'comments'
-      response.should be_success
+      response.should redirect_to('home')
     end
   end
 
