@@ -1,0 +1,80 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@import url("http://fonts.googleapis.com/css?family=Rosario&v2");
+body {
+  background: #fff;
+  color: #333;
+  font-family: Rosario, Georgia, "Times New Roman", serif; }
+
+h1 {
+  font-size: 2.5em;
+  margin: 1em 1em .2em; }
+
+.home p {
+  margin: 0 2.6em 1em; }
+.home input[type=text] {
+  color: #555;
+  font-size: 1.2em;
+  width: 34em;
+  padding: .2em .3em;
+  border: 1px solid #ccc;
+  margin: 0 2.1em;
+  display: block;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px; }
+.home input[type=submit] {
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+  background: #e1e1e1;
+  text-shadow: #fff 1px 1px 0;
+  color: #333;
+  cursor: pointer;
+  margin: .75em 2.1em;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px; }
+  .home input[type=submit]:hover {
+    background: #cfcfcf;
+    border: 1px solid #999; }

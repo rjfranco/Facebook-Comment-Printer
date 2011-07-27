@@ -1,4 +1,13 @@
 FbCommentPrinter::Application.routes.draw do
+  root :to => 'pages#home'
+  match 'about' => 'pages#about'
+  match 'comments' => 'pages#comments'
+
+
+  get "pages/home"
+  get "pages/comments"
+  get "pages/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
