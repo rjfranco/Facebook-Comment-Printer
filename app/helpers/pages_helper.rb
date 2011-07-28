@@ -14,10 +14,14 @@ module PagesHelper
     fbresult = JSON.parse(commentobject)
     
     fbresult[thisurl]['data'].each do |data|
+      name = data['from']['name']
+      message = data['message']
       
-      comment = []
-      comment.name = data['from']['name']
-      comment.message = data['message']
+      puts "      <li>
+        <h4>#{name}</h4>
+        <p>#{message}</p>
+      </li>
+"
     end
 
     return comments
