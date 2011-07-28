@@ -1,9 +1,5 @@
 <h2><%= get_title_for @fburl %></h2>
 
 <ul>
-  <%= @comment.each do |comment| %>
-  <li>
-    <%= comment %>
-  </li>
-  <% end %>
+<%=raw get_comments_for @fburl %>
 </ul>

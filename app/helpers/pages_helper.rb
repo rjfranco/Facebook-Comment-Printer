@@ -12,16 +12,36 @@ module PagesHelper
   def get_comments_for(thisurl)
     commentobject = get_document_from_facebook_for(thisurl)
     fbresult = JSON.parse(commentobject)
+    comments = ""
     
     fbresult[thisurl]['data'].each do |data|
       name = data['from']['name']
       message = data['message']
       
-      puts "      <li>
-        <h4>#{name}</h4>
-        <p>#{message}</p>
-      </li>
-"
+      comments += "  <li>\n"
+      comments += "    <h4>#{name}"
+      unless data['likes'].nil?
+        likes = data['likes']
+        comments += " | Likes [#{likes}]"
+      end
+      comments += "</h4>\n"
+      comments += "    <p>#{message}</p>\n"
+
+      unless data['comments'].nil?
+        comments += "    <ul>\n"
+        data['comments']['data'].each do |comment|
+          name = comment['from']['name']
+          message = comment['message']
+          
+          comments += "      <li>\n"
+          comments += "        <h4>#{name}</h4>\n"
+          comments += "        <p>#{message}</p>\n"
+          comments += "      </li>\n"
+        end
+        comments += "    </ul>\n"
+      end
+
+      comments += "  </li>\n"
     end
 
     return comments
