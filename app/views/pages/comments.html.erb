@@ -1,1 +1,9 @@
 <h2><%= get_title_for @fburl %></h2>
+
+<ul>
+  <%= @comment.each do |comment| %>
+  <li>
+    <%= comment %>
+  </li>
+  <% end %>
+</ul>
