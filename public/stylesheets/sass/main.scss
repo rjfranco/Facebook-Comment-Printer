@@ -18,6 +18,18 @@ h1 {
 	margin: 1em 1em .2em;
 }
 
+h5.flash {
+	border: 1px solid #ccc;
+	background: #e1e1e1;
+	margin: 1em 2.4em;
+	padding: .5em;
+	font-size: 1.1em;
+	&.notice {
+		border: 1px solid #e9df9e;
+		background: #fbfaf3;
+	}
+}
+
 .home {
 	p {
 		margin: 0 2.6em 1em;

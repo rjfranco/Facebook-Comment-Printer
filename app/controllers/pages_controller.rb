@@ -3,9 +3,10 @@ class PagesController < ApplicationController
   end
 
   def comments
-    if params[:fburl] then
+    if params[:fburl]
+      @fburl = params[:fburl]
     else
-      redirect_to root_path
+      redirect_to root_path, :flash => { :notice => 'Please Provide a URL that contains facebook comments.' }
     end
   end
 
