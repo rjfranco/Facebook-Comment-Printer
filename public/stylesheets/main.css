@@ -88,3 +88,58 @@ h5.flash {
   .home input[type=submit]:hover {
     background: #cfcfcf;
     border: 1px solid #999; }
+.home a.about {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: block;
+  background: #333;
+  color: #fff;
+  padding: .4em .7em;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  text-decoration: none; }
+  .home a.about:hover {
+    background: #666; }
+
+.about.body {
+  width: 34em; }
+.about p {
+  margin: 1em 0 1em 2.6em; }
+
+.comments a.print {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  display: block;
+  background: #333;
+  color: #fff;
+  padding: .4em .7em;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  text-decoration: none; }
+  .comments a.print:hover {
+    background: #666; }
+  @media print {
+    .comments a.print {
+      display: none; } }
+.comments.body {
+  margin: 2em; }
+.comments h2 {
+  font-size: 1.4em;
+  margin: 0 0 1em; }
+.comments h4 {
+  color: #333;
+  margin: 0 0 .2em; }
+  .comments h4 span {
+    color: #553333; }
+.comments p {
+  margin: 0 0 1.4em;
+  line-height: 1.2em;
+  color: #555; }
+.comments ul ul {
+  margin: 0 0 2em 1.2em; }
+  .comments ul ul li p {
+    margin: 0 0 .9em; }

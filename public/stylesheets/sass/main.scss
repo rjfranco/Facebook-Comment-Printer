@@ -58,4 +58,76 @@ h5.flash {
 			border: 1px solid #999;
 		}
 	}
+	a.about {
+		position: fixed;
+		bottom: 2em;
+		right: 2em;
+		display: block;
+		background: #333;
+		color: #fff;
+		padding: .4em .7em;
+		@include rounded;
+		text-decoration: none;
+		&:hover {
+			background: #666;
+		}
+	}
+}
+
+.about {
+	&.body {
+		width: 34em;
+	}
+	p {
+		margin: 1em 0 1em 2.6em;
+	}
+}
+
+.comments {
+	a.print {
+		position: fixed;
+		top: 2em;
+		right: 2em;
+		display: block;
+		background: #333;
+		color: #fff;
+		padding: .4em .7em;
+		@include rounded;
+		text-decoration: none;
+		&:hover {
+			background: #666;
+		}
+		@media print {
+			display: none;
+		}
+	}
+	&.body {
+		margin: 2em;
+	}
+	h2 {
+		font-size: 1.4em;
+		margin: 0 0 1em;
+	}
+	h4 {
+		color: #333;
+		margin: 0 0 .2em;
+		span {
+			color: #553333;
+		}
+	}
+	p {
+		margin: 0 0 1.4em;
+		line-height: 1.2em;
+		color: #555;
+	}
+	ul {
+		ul {
+			margin: 0 0 2em 1.2em;
+			li {
+				p {
+					margin: 0 0 .9em;
+				}
+			}
+		}
+	}
 }

@@ -18,30 +18,30 @@ module PagesHelper
       name = data['from']['name']
       message = data['message']
       
-      comments += "  <li>\n"
-      comments += "    <h4>#{name}"
+      comments += "    <li>\n"
+      comments += "      <h4>#{name}"
       unless data['likes'].nil?
         likes = data['likes']
-        comments += " | Likes [#{likes}]"
+        comments += " <span>| Likes [#{likes}]</span>"
       end
       comments += "</h4>\n"
-      comments += "    <p>#{message}</p>\n"
+      comments += "      <p>#{message}</p>\n"
 
       unless data['comments'].nil?
-        comments += "    <ul>\n"
+        comments += "      <ul>\n"
         data['comments']['data'].each do |comment|
           name = comment['from']['name']
           message = comment['message']
           
-          comments += "      <li>\n"
-          comments += "        <h4>#{name}</h4>\n"
-          comments += "        <p>#{message}</p>\n"
-          comments += "      </li>\n"
+          comments += "        <li>\n"
+          comments += "          <h4>#{name}</h4>\n"
+          comments += "          <p>#{message}</p>\n"
+          comments += "        </li>\n"
         end
-        comments += "    </ul>\n"
+        comments += "      </ul>\n"
       end
 
-      comments += "  </li>\n"
+      comments += "    </li>\n"
     end
 
     return comments
